@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumpy</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="principal">
+        <img src="img/logo.svg" alt="" class="pLogo">
+        <div class="pTitulo">
+            <img src="img/jumpy.svg" alt="" class="pApp">
+            <h1 class="pTexto">Bem vindo ao Jumpy!</h1>
+        </div>
+    </header>
+    <main class="formulario">
+        <form class="form">
+            <div class="fItem" id="nome">
+                <label for="" class="etiqueta">Nome completo:</label>
+                <input type="text" placeholder="Nome completo" required class="entrada" >
+            </div>
+            <div class="fItem" id="email">
+                <label for="" class="etiqueta">Email:</label>
+                <input type="email" placeholder="Email@email.com" required class="entrada">
+            </div>
+            <div class="fItem" id="telefone">
+                <label for="" class="etiqueta">Telefone:</label>
+                <input type="tel" placeholder="(00) 00000-0000" required class="entrada">
+            </div>
+            <div class="fItem" id="cpf">
+                <label for="" class="etiqueta">CPF:</label>
+                <input type="text" placeholder="000.000.000-00" required class="entrada">
+            </div>
+            <div class="fItem" id="senha">
+                <label for="" class="etiqueta">Senha:</label>
+                <input type="password" placeholder="Senha" class="entrada">
+                
+            </div>
+            <button type="submit" class="botao">Cadastrar</button>
+            <p class="avisoPrincipal"></p>
+        </form>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

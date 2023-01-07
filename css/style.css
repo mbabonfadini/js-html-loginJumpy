@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --font-form-:'Raleway', sans-serif;
+    --font-titulo-: 'Helvetica', sans-serif;
+    --cor-dnc:#303030;
+    --cor-detalhe:#ffffff;
+    --cor-input:#181818;
+    --cor-botao:#0C70F2;
+    --cor-alert:#E73550;
+    --cor-alert-positivo:#0F7B0F;
+}
+
+body {
+    background-color: var(--cor-dnc) ;
+    color: var(--cor-detalhe);
+    font-family: var(--font-form-);
+    font-weight: 600;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.pLogo {
+    width: 80%;
+    margin: 3em 5em;
+}
+
+.pTitulo {
+    margin: 5vmax 17vmax 0 0 ;
+    text-align: center;
+    
+}
+
+.pApp{
+    width: 30%;
+    margin-bottom: 2em;
+}
+
+.pTexto {
+    font-size: 3em;
+    font-family: var(--font-titulo-);
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.form {
+    font-size: 2.25em;
+    margin: 0 37% 0 32%;
+}
+
+.fItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.etiqueta {
+    align-self: start;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.entrada {
+    font-weight: 400;
+    color: var(--cor-input);
+    border-radius: 10px;
+    padding: 0.25em;
+}
+
+.botao {
+    background-color: var(--cor-botao);
+    border-radius: 6px;
+    padding: 0.25em;
+    width: 100%;
+}
+
+.aviso {
+    align-self: flex-end;
+    color: var(--cor-alert);
+    font-weight: 400;
+    margin-top: 0.5em;
+    font-size: 0.5em;
+}
+
+.avisoPrincipal {
+    align-self: initial;
+    color: var(--cor-alert);
+    font-weight: 400;
+    margin-top: 0.5em;
+    font-size: 0.5em;
+}
