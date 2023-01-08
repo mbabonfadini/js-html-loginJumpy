@@ -20,11 +20,11 @@ body {
 
 .principal {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 15% 1fr;
 }
 
 .pLogo {
-    width: 80%;
+    width: 90%;
     margin: 3em 5em;
 }
 
@@ -91,4 +91,63 @@ body {
     font-weight: 400;
     margin-top: 0.5em;
     font-size: 0.5em;
+}
+
+
+@media screen and (max-width: 1080px){
+    
+    .pLogo {
+        width:80%;
+    }
+
+    .pTitulo {
+        margin: 2em 20% 2em 0 ;
+        text-align: center;
+    }
+    .pApp{
+        width: 30%;
+    }
+    
+    .pTexto{
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    .form {
+        font-size: 2.25em;
+        margin: 0 10% 0 10%;
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 720px){
+    .principal {
+        display: block;
+        text-align: center;
+    }
+
+    .pLogo {
+        width:30%;
+    }
+
+    .pTitulo {
+        margin: 2em 0 2em 0;
+        
+    }
+    .pApp{
+        width: 70%;
+    }
+    
+    .pTexto{
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    .form {
+        font-size: 2.25em;
+        margin: 0 10% 0 10%;
+        font-size: 1.5em;
+    }
+
 }
