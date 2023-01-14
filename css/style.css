@@ -24,7 +24,7 @@ body {
 }
 
 .pLogo {
-    width: 90%;
+    width: 60%;
     margin: 3em 5em;
 }
 
@@ -35,20 +35,20 @@ body {
 }
 
 .pApp{
-    width: 30%;
+    width: 20%;
     margin-bottom: 2em;
 }
 
 .pTexto {
-    font-size: 3em;
+    font-size: 2em;
     font-family: var(--font-titulo-);
     font-weight: 700;
     margin-bottom: 1em;
 }
 
 .form {
-    font-size: 2.25em;
-    margin: 0 37% 0 32%;
+    font-size: 1.5em;
+    margin: 0 37% 3em 32%;
 }
 
 .fItem {
@@ -129,6 +129,7 @@ body {
 
     .pLogo {
         width:30%;
+        margin: 0.75em 5em;
     }
 
     .pTitulo {
@@ -136,18 +137,18 @@ body {
         
     }
     .pApp{
-        width: 70%;
+        width: 50%;
     }
     
     .pTexto{
-        font-size: 2em;
+        font-size: 1.5em;
         margin-bottom: 1em;
     }
 
     .form {
-        font-size: 2.25em;
+        font-size: 1.25em;
         margin: 0 10% 0 10%;
-        font-size: 1.5em;
+        
     }
 
 }
