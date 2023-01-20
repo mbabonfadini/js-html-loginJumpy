@@ -19,30 +19,35 @@
     <main class="formulario">
         <form class="form">
             <div class="fItem" id="nome">
-                <label for="" class="etiqueta">Nome completo:</label>
-                <input type="text" placeholder="Nome completo" class="entrada" >
+                <label for="nome" class="etiqueta">Nome completo:</label>
+                <input type="text" name="nome"  placeholder="Nome completo" class="entrada" required minlength="3">
+                <p class="aviso"></p>
             </div>
             <div class="fItem" id="email">
                 <label for="" class="etiqueta">Email:</label>
-                <input type="email" placeholder="Email@email.com" class="entrada">
+                <input type="email" name="email" placeholder="Email@email.com" class="entrada" required minlength="4">
+                <p class="aviso"></p>
             </div>
             <div class="fItem" id="telefone">
                 <label for="" class="etiqueta">Telefone:</label>
-                <input type="tel" placeholder="(00) 00000-0000"  class="entrada">
+                <input type="tel" name="telefone" placeholder="(00) 00000-0000"  class="entrada" required>
+                <p class="aviso"></p>
             </div>
             <div class="fItem" id="cpf">
                 <label for="" class="etiqueta">CPF:</label>
-                <input type="text" placeholder="000.000.000-00" class="entrada">
+                <input type="text" name="cpf" placeholder="000.000.000-00" class="entrada" required pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" maxlength="14">
+                <p class="aviso"></p>
             </div>
             <div class="fItem" id="senha">
                 <label for="" class="etiqueta">Senha:</label>
-                <input type="password" placeholder="Senha" class="entrada">
+                <input type="password" name="senha" placeholder="Senha" class="entrada" required minlength="6">
+                <p class="aviso"></p>
                 
             </div>
             <button type="submit" class="botao">Cadastrar</button>
             <p class="avisoPrincipal"></p>
         </form>
     </main>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>
