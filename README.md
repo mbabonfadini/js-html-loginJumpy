@@ -2,51 +2,41 @@ form.addEventListener:
     faz o submit dos dados inputados pelo usuário e passa por etapas de conferencia.
     <script>
         form.addEventListener("submit",(evento)=>{
-        evento.preventDefault() 
-        confereDados()})
+            evento.preventDefault() 
+    enviaDados()})
     </script>
 
-função confereDados():
+função validaValor():
     Realiza a conferencia das informações inputadas pelo usuário, verificando se há itens vazios.
     <script>
-        function confereDados(){
-            let informacoes = []
-            avisos.forEach((element)=>{
-                element.remove()
+        function validaValor(elemento){
+            let mensagem = "";
+            elemento.setCustomValidity("")
+            if(elemento.name=="cpf" && elemento.value.length >=11){
+                ehCPF(elemento)
+            }
+            tiposDeErro.forEach(erro=>{
+                if(elemento.validity[erro]){
+                    mensagem = mensagens[elemento.name][erro]
+                }
             })
-            avisos = []
-            dados.forEach((element)=>{
-                let item = element.value.trim()
-                informacoes.push(item)
+            const mensagemErro = elemento.parentNode.querySelector(".aviso")
+            const validadorDeInput =elemento.checkValidity();
+        }
     Quando o valor inputado for vazio faz com que inclua uma tag <p>Campo Obrigatório*</p> destacado em vermelho abaixo do item que precisa ser validado. E uma tag <p class="avisoPrincipal"></p> recebe a informação de que o cadastro não foi finalizado devido os "Campos obrigatórios não terem sido registrados" também em vermelho:
-            if(item === ""){
-                element.parentElement.appendChild(constroiAviso())
-                avisos.push(element.parentElement.querySelector(".aviso"))
+            if(!validadorDeInput){
+                mensagemErro.textContent = mensagem
                 statusCadastro.style.color = 'var(--cor-alert)'
                 statusCadastro.innerHTML = 'Campos obrigatórios não registrados.'
-            }
-            })
+                return false
+                else{
+                mensagemErro.textContent = ""
+                statusCadastro.innerHTML = ''
+                return true}}
     Quando os dados sao inputados corretamente a tag <p class="avisoPrincipal"></p> recebe a informação de obteve sucesso no cadastro e que recebe uma coloração esverdeada:
-            if(informacoes.includes("") == false){
-            dados.forEach((element)=>{
-            element.value = ""  
-            })
-            statusCadastro.style.color = 'var(--cor-alert-positivo)'
-            statusCadastro.innerHTML = 'Sucesso!'
-        }
-        }
-    <script>
-
-função constroiAviso():
-    Contrói uma tag p com o aviso de "Campo Obrigatório*" e adiciona a classe ".aviso"
-    e retorna o elemento para que seja usado posterioremente:
-    <script>
-        function constroiAviso(){
-            let mensagem = document.createElement("p")
-            mensagem.innerHTML = 'Campo Obrigatório*'
-            mensagem.classList.add('aviso')
-            return mensagem
-        }
-    </script>
+            if(tudoCerto){
+                    statusCadastro.style.color = 'var(--cor-alert-positivo)'
+                    statusCadastro.innerHTML = 'Sucesso!'}
+            <script>
 
 Devido o jumpy ser um app foi pensado em uma versão mobile também, tendo 3 visões, até 720px, até 1080px e acima de 1080px, possibilitando o acesso em diversos dispositivos diferentes.

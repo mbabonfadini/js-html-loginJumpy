@@ -51,26 +51,26 @@ const mensagens = {
 }
 
 function enviaDados(){
-    let tudoCerto = ""
+    let tudoCerto = true
     dados.forEach(elemento=>{
         if(validaValor(elemento)){
-            statusCadastro.style.color = 'var(--cor-alert-positivo)'
-            statusCadastro.innerHTML = 'Sucesso!'
         }
         else{
-            statusCadastro.style.color = 'var(--cor-alert)'
-            statusCadastro.innerHTML = 'Campos obrigatórios não registrados.'
+            tudoCerto=false
         }
     })
+
+    if(tudoCerto){
+        statusCadastro.style.color = 'var(--cor-alert-positivo)'
+        statusCadastro.innerHTML = 'Sucesso!'
+    }
+    else{
+        statusCadastro.style.color = 'var(--cor-alert)'
+        statusCadastro.innerHTML = 'Campos obrigatórios não registrados.'
+    }
+
         
 }
-
-// function constroiAviso(){
-//     let mensagem = document.createElement("p")
-//     mensagem.innerHTML = 'Campo Obrigatório*'
-//     mensagem.classList.add('aviso')
-//     return mensagem
-// }
 
 function validaValor(elemento){
     let mensagem = "";
